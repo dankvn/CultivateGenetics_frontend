@@ -75,7 +75,7 @@ const Category = ({ category, products, slug }) => {
         )}
         {/* PAGINATION BUTTONS END */}
         {isLoading && (
-          <div className="absolute top-0 left-0 w-full h-full bg-transparentflex flex-col gap-5 justify-center items-center">
+          <div className="absolute top-0 left-0 w-full h-full bg-transparent flex flex-col gap-5 justify-center items-center">
             <img src="/icon_nav.png" width={150} />
             <span className="text-2xl font-medium">Loading...</span>
           </div>
