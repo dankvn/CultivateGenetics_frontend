@@ -18,7 +18,7 @@ const CartItem = ({ data }) => {
     };
 
     return (
-        <div className="flex py-5 gap-3 md:gap-5 border-b">
+        <div className="flex py-5 gap-3 md:gap-5 border-b border-b-black">
             {/* IMAGE START */}
             <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
                 <Image
@@ -44,21 +44,21 @@ const CartItem = ({ data }) => {
 
                     {/* PRODUCT PRICE */}
                     <div className="text-sm md:text-md font-bold text-black/[0.5] mt-2">
-                        MRP : &#8377;{p.price}
+                        USD : {p.price}
                     </div>
                 </div>
 
                 {/* PRODUCT SUBTITLE */}
-                <div className="text-md font-medium text-black/[0.5] hidden md:block">
+                <div className="text-md font-medium text-black/[0.6] hidden md:block">
                     {p.subtitle}
                 </div>
 
                 <div className="flex items-center justify-between mt-4">
-                    <div className="flex items-center gap-2 md:gap-10 text-black/[0.5] text-sm md:text-md">
+                    <div className="flex items-center gap-2 md:gap-10 text-black/[0.8] text-sm md:text-md">
                         <div className="flex items-center gap-1">
                             <div className="font-semibold">Size:</div>
                             <select
-                                className="hover:text-black"
+                                className="hover:text-black bg-transparent"
                                 onChange={(e) =>
                                     updateCartItem(e, "selectedSize")
                                 }
@@ -85,7 +85,7 @@ const CartItem = ({ data }) => {
                         <div className="flex items-center gap-1">
                             <div className="font-semibold">Quantity:</div>
                             <select
-                                className="hover:text-black"
+                                className="hover:text-black bg-transparent"
                                 onChange={(e) => updateCartItem(e, "quantity")}
                             >
                                 {Array.from(

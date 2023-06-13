@@ -15,6 +15,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+    --body-color: linear-gradient(90deg, hsl(81, 62%, 44%) 0%, hsl(54, 100%, 61%) 100%);
+    --container-color: linear-gradient(136deg, hsl(60, 86%, 45%) 0%, hsl(60, 86%, 45%) 100%);
+
 }
 
 * {
@@ -23,6 +26,34 @@
     box-sizing: border-box;
     letter-spacing: 1px;
 }
+body{
+    
+    background: var(--body-color);
+    color: var(--text-color);
+  }
+  
+  header{
+    width: 100%;
+    background: var(--body-color); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+  }
+  .my-select {
+      background-color: transparent;
+      color: black;
+  }
+  .bg-gradient {
+      background-image: var(--container-color); 
+   
+    }
+    
+  footer{
+    width: 100%;
+    background: var(--body-color); 
+   
+  }
 
 /* PRODUCT DETAILS CAROUSEL STYLING CUSTOMIZATION START */
 .productCarousel.carousel-root {
