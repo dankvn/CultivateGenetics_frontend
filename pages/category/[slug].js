@@ -4,7 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import { fetchDataFromApi } from "@/utils/api";
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import { getStaticPaths } from "next";
+
 const maxResult = 3;
 
 const Category = ({ category, products, slug }) => {
