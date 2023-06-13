@@ -23,7 +23,7 @@ const MenuMobile = ({
     categories,
 }) => {
     return (
-        <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-gradient border-t border-black text-black">
+        <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-gradient border-t-black text-black">
             {data.map((item) => {
                 return (
                     <React.Fragment key={item.id}>
