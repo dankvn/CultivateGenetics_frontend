@@ -88,28 +88,18 @@ const Category = ({ category, products, slug }) => {
 export default Category;
 
 export async function getStaticPaths() {
-    try {
-      const categorySlug = await fetchDataFromApi("/api/categories?populate=*");
-      
-      const paths = categorySlug?.data?.map((c) => ({
-        params: {
-          slug: c.attributes.slug.toString(),
-        },
-      })) || [];
-  
-      return {
-        paths,
-        fallback: false,
-      };
-    } catch (error) {
-      console.error("Error fetching category data:", error);
-      return {
-        paths: [],
-        fallback: false,
-      };
-    }
-  }
-  
+  const category = await fetchDataFromApi("/api/categories?populate=*");
+  const paths = category?.data?.map((c) => ({
+    params: {
+      slug: c.attributes.slug,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
 
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps({ params: { slug } }) {
